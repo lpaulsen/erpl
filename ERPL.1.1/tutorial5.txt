@@ -1,0 +1,24 @@
+[Tables in ERPL work like lists, but they are accessed using text instead of numbers.]
+[Accessing tables works almost exactly like lists; just use 'entry' instead of 'item'.]
+
+Let Scrabble be a table of numbers.
+Let entry "a" of Scrabble be 1.
+Let entry "z" of Scrabble be 10.
+Write Scrabble.
+
+[Double word score!]
+
+Multiply each entry of Scrabble by 2.
+Write Scrabble.
+
+[What if we want to do something more complicated to each entry? What if we want to use the names?]
+[We can use 'label' to access the names, and do our more complicated work using 'for'.]
+['For' works somewhat like while, except that it happens once for 'each' item or entry it's given.]
+
+For each label L in Scrabble:
+    Let the Value be the contents of entry L of Scrabble.
+    Write "The value of " followed by L followed by " is " followed by the Value.
+
+    
+[This concludes the tutorial. More features of ERPL are documented in README.txt-- try them out!]
+[For more advanced / practical examples, take a look at formatter.txt and wordcount.txt.]

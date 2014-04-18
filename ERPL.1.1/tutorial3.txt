@@ -1,0 +1,35 @@
+[We can use 'if' and a related word, 'while', to give us interesting information about numbers.]
+
+Write "Enter a number: ".
+Let N be a number.
+Read N.
+
+[Just like you can write numbers, you can read numbers.]
+[Here's another way of setting up an 'if', one that allows you to include multiple commands.]
+[The 'otherwise' is optional but often helpful, if you want to do something in the opposite case.]
+
+If N is less than 0: 
+    Write "This number is negative.".
+    Quit.
+Otherwise:
+    Write "This number is not negative.".
+    
+['Quit' is a useful way to stopping a program entirely.]
+[You don't have to indent the 'write' commands, but it's often helpful for structuring your code.]
+[When you use colons to structure code like this, make sure you leave a blank line at the end.]
+
+['While' works like 'if', except that the command is performed repeatedly until the 'is' condition stops being true.]
+[When writing 'while' loops, be careful to make sure that the condition will eventually stop being true!]
+
+Let the Factorial be 1.
+
+While N is greater than 0:
+    Multiply the Factorial by N.
+    Subtract 1 from N.
+    
+[In this case, the 'subtract' command, along with the 'if' statement above, makes sure that we eventually get to 0.]
+[Commands like 'multiply' and 'subtract' actually change the value of variables, while words like 'times' and 'minus' don't.]
+    
+Write "The factorial of this number is: " followed by the contents of the Factorial.
+
+[The word 'contents' turns a number (or any other kind of value) into text for easy writing.]

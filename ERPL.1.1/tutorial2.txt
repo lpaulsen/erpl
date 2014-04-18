@@ -1,0 +1,19 @@
+[ERPL doesn't just write things; it can also read things that you write.]
+[The following code tells ERPL that the Name is text, and then prompts you to fill it in.]
+[Note that you can put 'the' in front of any variable or value to make your code read better.]
+
+Let the Name be a text.
+Write "Please enter your name: ".
+Read the Name.
+
+[Now the Name variable holds your name. Let's do something with it.]
+[Use the words 'followed by' to string multiple pieces of text together.]
+
+Write "Welcome, " followed by Name followed by "!".
+
+[We can also do different things depending on what the name is.]
+[To do this, use the words 'if' and 'is' to set up the condition.]
+
+If the Name is "Nemo", write "That's a nice name!".
+
+[A quick test to make sure you're still with me: Edit that last line so that ERPL says your own name is a nice name.]

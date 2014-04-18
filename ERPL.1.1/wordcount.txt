@@ -1,0 +1,14 @@
+Start reading from "bible.txt".
+Start writing to "bible_wordcount.txt".
+
+Let Input be " ".
+Let Wordcount be a table of numbers.
+While the length of the Input is greater than 0:
+    Read the Input.
+    For each item W in the words of the Input:
+        If entry W of Wordcount exists:
+            Add 1 to entry W of Wordcount.
+        Otherwise:
+            Let entry W of Wordcount be 1.
+
+Write the Wordcount.

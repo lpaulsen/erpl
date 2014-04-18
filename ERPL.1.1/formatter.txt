@@ -1,0 +1,22 @@
+[Used to write completed lines.]
+To output a text Line:
+    If the length of the Line is greater than 0, write the Line.
+    Let the Line be "".
+  
+[Used to add words to incomplete lines.]
+To update a text Line with a text Word:
+    If the length of the Line plus the length of the Word is at least 60, output the Line.
+    If the length of the Line is greater than 0, let the Line be the Line followed by " ".
+    Let the Line be the Line followed by the Word.
+    
+[These file names can be changed as needed.]
+Start reading from "bible.txt".
+Start writing to "bible_formatted.txt".
+Let the Input be " ".
+Let the Result be "".
+[Loop to read in text from the input file.]
+While the length of the Input is greater than 0:
+    Read the Input.
+    Update the Result with each item of the words of the Input.
+Then:
+    Output the Result.

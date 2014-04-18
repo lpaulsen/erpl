@@ -1,0 +1,30 @@
+[Besides simple numbers and texts, you can make lists that combine many of the same thing.]
+
+Let Primes be 2, 3, 5, 7, 11, and 17.
+Write item 1 of the Primes.
+
+[Oops, we missed a number!]
+
+Let item 6 of the Primes be 13.
+Append 17 to the Primes.
+Write the Primes.
+
+[Primes is a list of numbers. Get specific items of a list by giving the item's number in the list.]
+[You can also do things to every item of the list at once, using the word 'each'.]
+
+Write each item of the Primes.
+
+[Another use of the word 'each' might be to combine all of the items together somehow.]
+
+Let N be 1.
+Multiply N by each item of the Primes.
+Write N.
+
+[Trying to access an item of the list that doesn't exist will produce an error.]
+[There are several good ways of avoiding this.]
+
+Let I be a number.
+Write "Enter an item of the list...".
+Read I.
+If I is greater than the range of the Primes, write "Bad input, caught you!".
+If item I of the Primes exists, write item I of the Primes.
