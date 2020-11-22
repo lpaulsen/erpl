@@ -555,29 +555,29 @@ def process_line(s):
             to_execute.typecheck()
             to_execute.operate()
         except MySyntaxError as e:
-            print ""
-            print "That looks like a syntax error. If you think it shouldn't be, please tell me."
-            print "Error details:"
-            print e.value
-            print "Code:"
-            print statement_list
-            print ""
+            print("")
+            print("That looks like a syntax error. If you think it shouldn't be, please tell me.")
+            print("Error details:")
+            print(e.value)
+            print("Code:")
+            print(statement_list)
+            print("")
         except MyRuntimeError as e:
-            print ""
-            print "ERPL couldn't execute that command. If you think this is an issue, please tell me."
-            print "Error details: "
-            print e.value
-            print "Code:"
-            print statement_list
-            print ""
+            print("")
+            print("ERPL couldn't execute that command. If you think this is an issue, please tell me.")
+            print("Error details: ")
+            print(e.value)
+            print("Code:")
+            print(statement_list)
+            print("")
             # TODO: Recover gracefully by saving / restoring n
         except Exception as e:
-            print ""
-            print "Something bad happened. Please report this!"
+            print("")
+            print("Something bad happened. Please report this!")
             traceback.print_exc()
-            print "Code:"
-            print statement_list
-            print ""
+            print("Code:")
+            print(statement_list)
+            print("")
             quit()
         statement_list.append("")
 
@@ -603,4 +603,4 @@ if __name__ == "__main__":
                     process_line(l.strip())
                     break
     else:
-        print "Usage: 'calc.py' OR 'calc.py [filename]'"
+        print("Usage: 'calc.py' OR 'calc.py [filename]'")

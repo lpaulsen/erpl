@@ -207,7 +207,7 @@ def copy_helper(result):
         return Result([copy_helper(subresult) for subresult in result.value], result.type)
     elif result.type.top == 'table':
         result_dict = {}
-        for key, value in result.value.iteritems():
+        for key, value in result.value.items():
             result_dict[key] = copy_helper(value)
         return Result(result_dict, result.type)
     else:
@@ -250,7 +250,7 @@ def print_helper(result):
             return "[empty list]"
     elif result.type.top == 'table':
         if len(result.value) > 0:
-            return ", ".join([key + ": " + print_helper(subresult) for (key, subresult) in result.value.iteritems()])
+            return ", ".join([key + ": " + print_helper(subresult) for (key, subresult) in result.value.items()])
         else:
             return "[empty table]"
     elif result.type.top == 'bool':
@@ -311,7 +311,7 @@ def print_op(a1):
     if out_file:
         out_file.write(l + "\n")
     else:
-        print l
+        print(l)
     return True
     
 def write_file_op(s1):
@@ -812,7 +812,7 @@ def get_it():
     return it_value
     
 op_list = {}
-for key, value in spec_list.iteritems():
+for key, value in spec_list.items():
     op_list[key] = (value[0], type_from_string(value[1]), [type_from_string(i) for i in value[2]])
 n = NounList()
 it_value = None
