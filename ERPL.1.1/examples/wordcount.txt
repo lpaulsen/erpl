@@ -1,5 +1,5 @@
-Start reading from "bible.txt".
-Start writing to "bible_wordcount.txt".
+Start reading from "examples/data/bible.txt".
+Start writing to "examples/data/bible_wordcount.txt".
 
 Let Input be " ".
 Let Wordcount be a table of numbers.

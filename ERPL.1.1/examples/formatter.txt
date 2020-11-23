@@ -10,8 +10,8 @@ To update a text Line with a text Word:
     Let the Line be the Line followed by the Word.
     
 [These file names can be changed as needed.]
-Start reading from "bible.txt".
-Start writing to "bible_formatted.txt".
+Start reading from "examples/data/bible.txt".
+Start writing to "examples/data/bible_formatted.txt".
 Let the Input be " ".
 Let the Result be "".
 [Loop to read in text from the input file.]
