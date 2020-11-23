@@ -215,6 +215,10 @@ def copy_helper(result):
         
 # Helper function for comparing two results of the same time. Recursive. Returns -1 / 0 / 1.
 def compare_helper(result1, result2):
+    # C-style cmp defined for historical reasons (port from Python 2)
+    def cmp(x, y):
+        return (x > y) - (x < y)
+
     if result1.type.top == 'list':
         # Lexical-esque ordering
         for i in range(min(len(result1.value), len(result2.value))):
@@ -333,7 +337,7 @@ def read_op(av1):
         if in_file:
             l = in_file.readline()
         else:
-            l = raw_input('READ > ')
+            l = input('READ > ')
     except EOFError:
         l = ""
     n.update_noun(av1.value, read_helper(l, av1.type).value)

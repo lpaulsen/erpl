@@ -583,24 +583,32 @@ def process_line(s):
 
 def get_nesting_level():
     return nesting_level
-        
-# Execute as a command line tool
-if __name__ == "__main__":
-    if len(sys.argv) == 1:
+
+# Entry points for anything running ERPL from the command line
+def repl(program_file):
+    if program_file == "":
         while True:
             try:
-                l = raw_input('calc ' + '... ' * get_nesting_level() + '> ')
+                l = input('calc ' + '... ' * calc.get_nesting_level() + '> ')
             except EOFError:
                 break
             process_line(l)
-    elif len(sys.argv) == 2:
-        with open(sys.argv[1], "r") as f:
+    else:
+        with open(program_file, "r") as f:
             while True:
                 l = f.readline()
                 if l.endswith("\n"):
                     process_line(l.strip())
                 else:
+                    # Getting a line without \n implies EOF
                     process_line(l.strip())
                     break
+
+# Execute as a command line tool
+if __name__ == "__main__":
+    if len(sys.argv) == 1:
+        repl("")
+    elif len(sys.argv) == 2:
+        repl(sys.argv[1])
     else:
         print("Usage: 'calc.py' OR 'calc.py [filename]'")

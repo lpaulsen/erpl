@@ -12,19 +12,4 @@ program_file = input("Filename: ")
 print("-----------------------------------")
 print("")
 
-if program_file == "":
-    while True:
-        try:
-            l = input('calc ' + '... ' * calc.get_nesting_level() + '> ')
-        except EOFError:
-            break
-        calc.process_line(l)
-else:
-    with open(program_file, "r") as f:
-        while True:
-            l = f.readline()
-            if l.endswith("\n"):
-                calc.process_line(l.strip())
-            else:
-                calc.process_line(l.strip())
-                break
+calc.repl(program_file)
